@@ -5,8 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        p {
+            background-color: khaki;
+        }
+        .mform {
+            max-width: 550px;
+            margin: auto;
+        }
+        label{
+            display: block;
+        }
+        input, textarea {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <form action="" class="mform">
+        <p>
+            <label for = "name">Name</label>
+            <input type = text id = "name" value = "my name">
+        </p>
+
+        <p>
+            <label for = "email">Email</label>
+            <input type = text id = "email" value = "my email">
+        </p>
+        <p>
+            <label for = "message">Message</label>
+            <textarea type = text id = "message" value = "my message"></textarea>
+        </p>
+        <button type = "button"> button </button>
     
+
+    </form>
 </body>
 </html>
