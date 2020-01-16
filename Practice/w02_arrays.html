@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const colors = ["red", "blue", "yellow", "orange"];
+    const adjectives = ["bold", "shy", "strong", "lazy","round", "flat", "old" ];
+    const number = [1, 2, 3, 4, 5, 6];
+    const nouns = ["bike", "cat", "plate", "computer", "student", "car", "house"];
+    const verb = ["ran", "ate", "sat", "arrived", "laughed"];
+
+
+    // example of for loop to traverse array
+    for(let i = 0;i<colors.length; i++){
+        console.dir(colors);
+        console.log(colors[i]);
+    }
+
+    function stuff(item){
+        console.log(item);
+    }
+    //forEach
+
+
+    //map
+    //lets say you want to change the color to light colors
+    const newArray = colors.map(color => {
+        return 'light' + color;
+        // returning each new element in the array with word "light" in front of it. It is creating a new array. 
+    });
+    console.log(newArray);
+
+    const negative = number.map(number => number * -1);
+    console.log(negative);
+    //the console.log is used for debugging.
+
+    //Math.random - generates a random number between 0 and 1. 
+    console.log(Math.random());
+
+    //Return a random number between 1 and 6
+
+    function random6(){
+        return Math.floor(Math.random()*6) + 1; //this will not return a 6, so if you want to return 1 - 6, including 6, then you have to add one on the end. 
+    }
+
+    function randomSent(){
+        const adj = Math.floor(Math.random()*7);
+        const n = Math.floor(Math.random()*7);
+        const v = Math.floor(Math.random()*5);
+
+        return "The " + adjectives[adj] + " " + nouns[n]; + " " + verb[v];
+    }
+
+    </script>
+    
+</body>
+</html>
