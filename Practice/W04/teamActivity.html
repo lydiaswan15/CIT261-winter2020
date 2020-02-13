@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link rel = "styleSheet" href = "teamActivity.css">
+    
+</head>
+<body>
+    <table class = "table">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <button type = "button">Button</button>
+
+
+    <script>
+        //This will loop through every td and add an event listener. On the event, it will call a 
+    //function (text) that will change the html of the page. 
+        const board = document.querySelector('.table');
+        const player = true;
+        const player1 = true;
+        const player2 = false;
+    
+        // function pickPlayer(){
+        //     if(player)player = player2;
+        //     else if(player == player2){player = true;}
+        //     console.log(player);
+        //     return player;
+        // }
+    
+        function addPiece(e){
+            console.log(e.target);
+        }
+    
+        board.addEventListener('click', addPiece);
+    
+        
+        </script>
+</body>
+</html>
