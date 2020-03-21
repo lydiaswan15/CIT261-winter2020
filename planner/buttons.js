@@ -1,6 +1,6 @@
 export function eventListeners(list){
     let removeButtons = document.querySelectorAll('.remove');
-    removeButtons.forEach(item => {
+    removeButtons.forEach((item) => {
         item.addEventListener('click', () => {
             list.forEach((item, index) => {
                 console.log(item);
@@ -8,9 +8,8 @@ export function eventListeners(list){
     });
 
     let completeButtons = document.querySelectorAll('.complete');
-    completeButtons.forEach(item => {
+    completeButtons.forEach((item) => {
         item.addEventListener('click', () => {
-            console.log(list);
         });
     });
 }
