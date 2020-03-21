@@ -1,4 +1,5 @@
 let oneDayList = [];
+import {eventListeners} from "./buttons.js";
 
 export default class Item{
     createNewItem(){
@@ -14,10 +15,11 @@ export default class Item{
         for(let i = 0; i < oneDayList.length; i++){
             const htmlFormatting = `
                 ${oneDayList[i].content}
-                <button id = "#${oneDayList[i].id}" class = "remove">Complete</button>
-                <button class = "complete">Remove</button>`
+                <button id = "#${oneDayList[i].id}" class = "complete">Complete</button>
+                <button class = "remove">Remove</button>`
             document.querySelector('#bodySection').innerHTML += htmlFormatting;
         }
+        eventListeners(oneDayList);
         oneDayList.forEach((element) =>{
             document.getElementById('#' + element.id).addEventListener('click', this.createNewItem);
         })
