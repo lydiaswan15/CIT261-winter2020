@@ -1,40 +1,73 @@
 let oneDayList = [];
-import {eventListeners} from "./buttons.js";
+const weekList = [
+    {
+        name: undefined,
+    } , 
+    {
+        name: "Sunday",
+        number: 0, 
+        current: false, 
+        tasks: []
+    } , 
+    
+    {
+        name: "Monday",
+        number: 1, 
+        current: false, 
+        tasks: []
+    } , 
+    {
+        name: "Tuesday",
+        number: 2, 
+        current: false, 
+        tasks: []
+    } , 
+    {
+        name: "Wednesday",
+        number: 3, 
+        current: false, 
+        tasks: []
+    } , 
+    {
+        name: "Thursday",
+        number: 4, 
+        current: false, 
+        tasks: []
+    } , 
+    {
+        name: "Friday",
+        number: 5, 
+        current: false, 
+        tasks: []
+    } , 
+    {
+        name: "Saturday",
+        number: 6, 
+        current: false, 
+        tasks: []
+    } , ];
+import {format} from "./format.js";
+import {eventListeners} from "./eventListeners.js";
 
 export default class Item{
+
+    Item(){}
+
     createNewItem(){
         const contentInfomation = document.getElementById('itemId').value;
-        const newItem = {id: new Date().getTime(), content: contentInfomation}
-        oneDayList.push(newItem);
-        console.log(oneDayList);
-        return this.oneDayList;
-    }
+        let weekDropDownMenu = document.getElementById('weekDropDownMenu');
+        let selectedOption = weekDropDownMenu.options[weekDropDownMenu.selectedIndex].text;
+       
+        const newItem = {id: new Date().getTime(), content: contentInfomation, dayOfWeek: selectedOption}
 
-    format(){
-        document.querySelector('#bodySection').innerHTML = "";
-        for(let i = 0; i < oneDayList.length; i++){
-            const htmlFormatting = `
-                ${oneDayList[i].content}
-                <button id = "#${oneDayList[i].id}" class = "complete">Complete</button>
-                <button class = "remove">Remove</button>`
-            document.querySelector('#bodySection').innerHTML += htmlFormatting;
-        }
-        eventListeners(oneDayList);
-        oneDayList.forEach((element) =>{
-            document.getElementById('#' + element.id).addEventListener('click', this.createNewItem);
+        weekList.forEach(item => {
+            if(item.name == newItem.dayOfWeek){
+                item.tasks.push(newItem);
+                format(weekList);
+            }  
         })
+        eventListeners(weekList);
     }
 
-    eventListeners(){
-        document.querySelectorAll('.remove').forEach(item =>{
-            item.addEventListener('click', item =>{
-                
-                if(item.id == item.target.id){
-                    console.log('they match');
-                }
-            })
-        })
-
-    }
 }
 

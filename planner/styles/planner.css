@@ -1,0 +1,35 @@
+
+body{
+    display: grid;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+/* Class Selectors */
+.rightMove{
+    background-color: yellow;
+}
+
+/* ID Selectors */
+
+#openingSlideSection{
+    grid-column: 1/2;
+    width: 100vw;
+}
+
+#page2{
+    width: 100vw;
+    grid-column: 2/3;
+}
+
+#weeklyList{
+    width: 100vw;
+    grid-column: 3/4;
+}
+
+#bodySection{
+    background-color: yellow;
+}
+
+

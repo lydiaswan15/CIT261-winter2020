@@ -39,7 +39,7 @@ function format(){
         <div class = 'item'>
         ${totalList[i].content}
         <div class = 'buttons'>
-        <button class = 'remove' id = ${totalList[i].id} >Remove</button>
+        <button class = 'remove' id = '${totalList[i].id}' >Remove</button>
         <button class = 'complete' id = ${totalList[i].id}>Complete</button>
         </div>
         </div>`;
