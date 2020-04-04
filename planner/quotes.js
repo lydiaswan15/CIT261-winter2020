@@ -12,8 +12,10 @@ fetch('https://type.fit/api/quotes')
         }
         
         const quoteSectionText = `
-        <p class = "quoteText">"${quote}"</p>
-        <p class = "qutoeAuthor">-${author}</p>`
+        <section id = "quoteSection"
+        <p id = "quoteText">"${quote}"</p>
+        <p id = "quoteAuthor">-${author}</p>
+        </section>`
 
         document.querySelector('#openingSlideSection').innerHTML += quoteSectionText;
 

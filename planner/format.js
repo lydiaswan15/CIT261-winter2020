@@ -18,9 +18,12 @@ export function format(weekList){
                     console.log('hello');
                     let content = currentIndex.tasks[j].content; 
                     const item = `
+                    <section class = "oneTask">
+                    <section class = "content">
                     <p>${content}</p>
-                    <button class = "complete">Complete</button>
+                    </section>
                     <button class = "remove" id = ${currentIndex.tasks[j].id}>Remove</button>
+                    </section>
                     `
                     totalItems += item;
                 }
@@ -38,9 +41,12 @@ export function format(weekList){
             for(let j = 0; j < currentIndex.tasks.length; j++){
                 let content = currentIndex.tasks[j].content; 
                 const item = `
+                <section class = "oneTask">
+                <section class = "content"
                 <p>${content}</p>
-                <button class = "complete">Complete</button>
+                </section>
                 <button class = "remove" id = ${currentIndex.tasks[j].id}>Remove</button>
+                </section>
                 `
                 totalItems += item;
             }

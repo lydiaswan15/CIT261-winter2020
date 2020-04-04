@@ -9,8 +9,10 @@ document.getElementById('newItemButton').addEventListener('click', item.createNe
 
 //Adding event listeners to the right and left buttons that move the screen depending on the direction. 
 //first right button
-let rightButtons = document.querySelectorAll('.rightButtons');
 let fullText = document.querySelector('body');
+function rightButtons(){
+let rightButtons = document.querySelectorAll('.rightButtons');
+
 rightButtons.forEach((item) =>{
     item.addEventListener('click', ()=>{
         fullText.classList.add('rightMove');
@@ -26,21 +28,16 @@ rightButton2.addEventListener('click', ()=>{
     fullText.classList.add('rightMove2');
     
 });
+}
 
-//first right button
-let leftButtons = document.querySelector('#leftButton1');
-leftButtons.addEventListener('click', ()=>{
-    fullText.classList.add('leftMove');
-    fullText.classList.remove('rightMove')
-});
-
-//second right button
+//left Button
 
 let leftButton2 = document.querySelector('#leftButton2');
 
 leftButton2.addEventListener('click', ()=>{
     fullText.classList.add('leftMove2');
-    console.log('welp');
+    fullText.classList.remove('rightMove');
+    rightButtons();
 });
 
 //Adding the date to the opening page. 
@@ -52,7 +49,7 @@ leftButton2.addEventListener('click', ()=>{
     document.getElementById('todayDate').innerHTML = fullDate;
     document.getElementById('todaysDatePageOne').innerHTML = todayDate;
 
- 
+ rightButtons();
 
 
 

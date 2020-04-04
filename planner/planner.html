@@ -9,19 +9,21 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,900&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
-    <button class = "rightButtons">----></button>
+    <button class = "rightButtons" id = "firstButton">&#x2192</button>
     <section id = "openingSlideSection">
+        <section id = "quoteSectionLarge">
         <h1 id = "todaysDatePageOne"></h1>
+        </section>
     </section>
 
+    <button id = 'rightButton2' class = "positioning">&#x2192</button>
     <section id = "page2">
-        <button id = 'leftButton1'></button>
-        <button id = 'rightButton2'>Right</button>
         <h1 id = "todayDate"></h1>
-        <section id = "listOfTodaysTasks"></section>
-        <button id = "newItemButton">Create New Item</button>
-        <section>
+
+        <section id = 'addingANewTaskAndList'>
+        <section id = "newItemInformation">
             <input type="text" id = "itemId">
             <select id="weekDropDownMenu">
                 <option value="Sunday">Sunday</option>
@@ -31,15 +33,21 @@
                 <option value="Thursday">Thursday</option>
                 <option value="Friday">Friday</option>
                 <option value="Saturday">Saturday</option>
-              </select>
-    </section>
+            </select>
+            <button id = "newItemButton">Create New Item</button>
+        </section>
+
+    <section id = "listOfTodaysTasks"></section>
+
+</section>
 
     </section>
 
   
     
     <section id = "weeklyList">
-        <button id = 'leftButton2'>Left</button>
+        <button id = 'leftButton2' class = "positioning">&#x2190</button>
+        <section id = "days">
         <section id = "Sunday">
             <h1>Sunday</h1>
             <div id = "SundayTasks"></div>
@@ -74,6 +82,7 @@
             <h1>Saturday</h1>
             <div id = "SaturdayTasks"></div>
         </section>
+    </section>
 
     </section>
     </section>
