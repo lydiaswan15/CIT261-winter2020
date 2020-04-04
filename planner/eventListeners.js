@@ -10,7 +10,6 @@ export function eventListeners(weekList){
         item.addEventListener('click', (e) => {
             for(let i = 1; i < weekList.length; i++){
                 weekList[i].tasks.forEach((currentListItem, currentIndex = -1) => {
-                    
                     if(currentListItem.id == e.currentTarget.id){
                         weekList[i].tasks.splice(currentIndex, 1);
                         format(weekList);
@@ -18,7 +17,7 @@ export function eventListeners(weekList){
                     };
                 })  
             }
-            
+            leftAndRight();
         })
     });
 
@@ -33,6 +32,6 @@ export function eventListeners(weekList){
 }
 
 
-export function movingEventListeners(){
-    console.log('hey');
+export function leftAndRight(){
+    console.log('hey')
 }

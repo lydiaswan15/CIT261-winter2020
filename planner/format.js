@@ -14,7 +14,6 @@ export function format(weekList){
             let totalItems = '';
             if(currentIndex.name == dayOfWeek){
                 let title = fullDate;
-                console.log(currentIndex.tasks);
                 for(let j = 0; j < currentIndex.tasks.length; j++){
                     console.log('hello');
                     let content = currentIndex.tasks[j].content; 
@@ -49,6 +48,7 @@ export function format(weekList){
             document.getElementById(className).innerHTML = totalItems;
 
         }
+        eventListeners(weekList);
     
 }
 

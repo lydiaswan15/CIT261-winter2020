@@ -3,12 +3,24 @@ body{
     display: grid;
     width: 100vw;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 /* Class Selectors */
+
+/* Right and Left Buttons */
 .rightMove{
-    background-color: yellow;
+    transform: translateX(-100vw);
+}
+.rightMove2{
+    transform: translate(-200vw);
+}
+.leftMove{
+    transform: translate(-100vw);
+}
+.leftMove2{
+    transform: translate(-100vw);
 }
 
 /* ID Selectors */
